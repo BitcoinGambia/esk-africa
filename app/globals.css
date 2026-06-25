@@ -5007,7 +5007,7 @@ img {
   grid-column: 1;
   display: grid;
   align-items: center;
-  background: var(--color-gray-100);
+  background: var(--color-dark);
   justify-content: center;
   padding: var(--space-lg);
 }
@@ -5018,7 +5018,7 @@ img {
   letter-spacing: 0.1em;
   transform: rotate(180deg);
   writing-mode: vertical-rl;
-  color: var(--color-accent-muted);
+  color: var(--color-gray-600);
   font-size: var(--font-display-md);
 }
 
