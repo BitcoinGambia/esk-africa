@@ -46,7 +46,7 @@ const Benefits = () => {
           <div className="benefits__list">
             {items.map((it, i) => (
               <div key={i} className="benefits__item">
-                <div className="benefits__item-image">
+                <div className="benefits__item-image" data-reveal="image">
                   <Image
                     className="image__full"
                     alt={it.alt}

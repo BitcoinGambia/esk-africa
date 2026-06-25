@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const members = [
+export const members = [
   {
     name: "Essa Sock",
     role: "Founder & General Manager",

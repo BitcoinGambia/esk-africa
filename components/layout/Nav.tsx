@@ -32,6 +32,7 @@ const Nav = () => {
               src="/images/logo.webp"
               width={585}
               height={357}
+              priority
             />
           </Link>
         </div>

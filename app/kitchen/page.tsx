@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import JsonLd from "@/components/seo/JsonLd";
+import { serviceSchema } from "@/lib/seo";
 import ServiceHero from "@/sections/shared/ServiceHero";
 import Gallery from "@/sections/shared/Gallery";
 import items from "@/sections/kitchen/galleryItems";
@@ -17,9 +19,16 @@ export const metadata: Metadata = {
   },
 };
 
+const schema = serviceSchema({
+  name: "Kitchen & Bath Fit-Out",
+  description: metadata.description as string,
+  url: "/kitchen",
+});
+
 const Kitchen = () => {
   return (
     <div className="page-kitchen">
+      <JsonLd schema={schema} />
       <ServiceHero
         title={"Kitchens and Baths\\nBuilt to Live In"}
         subtitle={

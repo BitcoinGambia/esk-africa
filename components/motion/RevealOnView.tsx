@@ -1,15 +1,16 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
-const RevealOnView = ({ children }: { children: React.ReactNode }) => {
-  const ref = useRef<HTMLDivElement>(null);
+const RevealOnView = () => {
+  const pathname = usePathname();
 
   useEffect(() => {
-    const root = ref.current;
-    if (!root) return;
+    document.documentElement.classList.add("js-reveal");
 
-    const els = root.querySelectorAll("[data-reveal]");
+    const els = document.querySelectorAll("[data-reveal]");
+
     const io = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
@@ -19,18 +20,15 @@ const RevealOnView = ({ children }: { children: React.ReactNode }) => {
           }
         }
       },
-      { threshold: 0.2 },
+      { rootMargin: "0px 0px -10% 0px", threshold: 0.1 },
     );
 
     els.forEach((el) => io.observe(el));
-    return () => io.disconnect();
-  }, []);
 
-  return (
-    <div ref={ref} style={{ display: "contents" }}>
-      {children}
-    </div>
-  );
+    return () => io.disconnect();
+  }, [pathname]);
+
+  return null;
 };
 
 export default RevealOnView;

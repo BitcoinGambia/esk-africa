@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import JsonLd from "@/components/seo/JsonLd";
+import { serviceSchema } from "@/lib/seo";
 import ServiceHero from "@/sections/shared/ServiceHero";
 import Gallery from "@/sections/shared/Gallery";
 import items from "@/sections/drywall/galleryItems";
@@ -16,9 +18,16 @@ export const metadata: Metadata = {
   },
 };
 
+const schema = serviceSchema({
+  name: "Drywall Systems",
+  description: metadata.description as string,
+  url: "/drywall",
+});
+
 const Drywall = () => {
   return (
     <div className="page-drywall">
+      <JsonLd schema={schema} />
       <ServiceHero
         title={"Walls that Define Spaces"}
         subtitle={

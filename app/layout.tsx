@@ -6,6 +6,7 @@ import Cursor from "@/components/layout/Cursor";
 import Footer from "@/components/layout/Footer";
 import LoadingScreen from "@/components/layout/LoadingScreen";
 import JsonLd from "@/components/seo/JsonLd";
+import { organizationSchema, localBusinessSchema } from "@/lib/seo";
 import SmoothScroll from "@/components/providers/SmoothScroll";
 import RevealOnView from "@/components/motion/RevealOnView";
 
@@ -117,14 +118,15 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en" className={spaceGrotesk.variable} suppressHydrationWarning>
       <body>
-        <JsonLd />
+        <JsonLd schema={[organizationSchema, localBusinessSchema]} />
         <LoadingScreen />
         <Cursor />
         <Nav />
         <SmoothScroll>
-          <RevealOnView>{children}</RevealOnView>
+          {children}
           <Footer />
         </SmoothScroll>
+        <RevealOnView />
       </body>
     </html>
   );

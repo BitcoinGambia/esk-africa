@@ -21,7 +21,7 @@ const Projects = () => {
 
   return (
     <div className="projects" id="projects">
-      <div className="projects__stage">
+      <div className="projects__stage" data-reveal="image">
         {slides.map((src, i) => (
           <div
             key={i}
@@ -31,7 +31,7 @@ const Projects = () => {
           >
             <Image
               className="image__full"
-              alt={`The Hive — image ${i + 1}`}
+              alt={`The Hive commercial fit-out by ESK — view ${i + 1}`}
               src={src}
               fill
               sizes="(max-width: 1200px) 100vw, 80vw"
