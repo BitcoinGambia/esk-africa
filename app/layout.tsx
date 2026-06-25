@@ -8,7 +8,7 @@ import LoadingScreen from "@/components/layout/LoadingScreen";
 import JsonLd from "@/components/seo/JsonLd";
 import { organizationSchema, localBusinessSchema } from "@/lib/seo";
 import SmoothScroll from "@/components/providers/SmoothScroll";
-import RevealOnView from "@/components/motion/RevealOnView";
+import Reveal from "@/components/motion/Reveal";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -126,7 +126,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           {children}
           <Footer />
         </SmoothScroll>
-        <RevealOnView />
+        <Reveal />
       </body>
     </html>
   );
