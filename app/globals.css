@@ -4969,3 +4969,205 @@ img {
     display: none;
   }
 }
+
+/**=================
+ * CONTACT PAGE
+ ==================*/
+.page-contact .contact {
+  width: 100vw;
+  position: relative;
+  background: var(--color-light);
+}
+
+.page-contact .contact__container {
+  padding: 0;
+}
+
+.page-contact .contact__grid {
+  gap: 0;
+  display: grid;
+  min-height: 100vh;
+  position: relative;
+  grid-template-columns: 0.4fr var(--border-width) 2fr var(--border-width) 1.6fr;
+}
+
+.page-contact .contact__grid-line-v1 {
+  grid-column: 2;
+  grid-row: 1 / -1;
+  background: var(--color-gray-300);
+}
+
+.page-contact .contact__grid-line-v2 {
+  grid-column: 4;
+  grid-row: 1 / -1;
+  background: var(--color-gray-300);
+}
+
+.page-contact .contact__accent {
+  grid-column: 1;
+  display: grid;
+  align-items: center;
+  background: var(--color-gray-100);
+  justify-content: center;
+  padding: var(--space-lg);
+}
+
+.page-contact .contact__accent-text {
+  font-weight: 500;
+  line-height: 0.8;
+  letter-spacing: 0.1em;
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
+  color: var(--color-accent-muted);
+  font-size: var(--font-display-md);
+}
+
+.page-contact .contact__main {
+  grid-column: 3;
+  display: grid;
+  align-content: center;
+  background: var(--color-light);
+  padding: clamp(7rem, 12vh, 10rem) var(--space-responsive-2xl)
+    var(--space-responsive-2xl);
+}
+
+.page-contact .contact__main .section__title {
+  color: var(--color-dark);
+}
+
+.page-contact .contact__form {
+  display: grid;
+  margin-top: var(--space-lg);
+  gap: var(--space-responsive-md);
+}
+
+.page-contact .contact__row {
+  display: grid;
+  gap: var(--space-responsive-md);
+  grid-template-columns: 1fr 1fr;
+}
+
+.page-contact .contact__field {
+  display: grid;
+  gap: var(--space-xs);
+}
+
+.page-contact .contact__label {
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-gray-600);
+  font-size: var(--font-caption);
+}
+
+.page-contact .contact__input {
+  width: 100%;
+  font: inherit;
+  color: var(--color-dark);
+  background: var(--color-light);
+  padding: var(--space-sm) var(--space-md);
+  border: var(--border-width) solid var(--color-gray-400);
+  transition: border-color var(--transition-base);
+}
+
+.page-contact .contact__input::placeholder {
+  color: var(--color-gray-500);
+}
+
+.page-contact .contact__input:focus {
+  outline: none;
+  border-color: var(--color-dark);
+}
+
+.page-contact .contact__textarea {
+  resize: vertical;
+  min-height: 8rem;
+}
+
+.page-contact .contact__submit {
+  width: fit-content;
+  margin-top: var(--space-sm);
+  cursor: pointer;
+  border: none;
+}
+
+.page-contact .contact__note {
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--color-gray-600);
+  font-size: var(--font-body-sm);
+}
+
+.page-contact .contact__info {
+  display: grid;
+  margin-top: var(--space-responsive-xl);
+  padding-top: var(--space-responsive-lg);
+  gap: var(--space-responsive-md);
+  grid-template-columns: 1fr 1fr;
+  border-top: var(--border-width) solid var(--color-gray-300);
+}
+
+.page-contact .contact__info-block {
+  display: grid;
+  gap: var(--space-xs);
+  align-content: start;
+}
+
+.page-contact .contact__info-label {
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-gray-500);
+  font-size: var(--font-caption);
+}
+
+.page-contact .contact__info-link,
+.page-contact .contact__info-text {
+  font-weight: 500;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: var(--color-dark);
+  font-size: var(--font-body-md);
+  transition: color var(--transition-base);
+}
+
+.page-contact .contact__info-link:hover {
+  color: var(--color-gray-600);
+}
+
+.page-contact .contact__image {
+  grid-column: 5;
+  grid-row: 1 / -1;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+@media (max-width: 1200px) {
+  .page-contact .contact__grid {
+    display: block;
+    min-height: auto;
+  }
+
+  .page-contact .contact__grid-line-v1,
+  .page-contact .contact__grid-line-v2,
+  .page-contact .contact__accent {
+    display: none;
+  }
+
+  .page-contact .contact__main {
+    padding: clamp(7rem, 14vh, 9rem) var(--space-responsive-lg)
+      var(--space-responsive-2xl);
+  }
+
+  .page-contact .contact__image {
+    min-height: 60vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-contact .contact__row,
+  .page-contact .contact__info {
+    grid-template-columns: 1fr;
+  }
+}

@@ -52,6 +52,7 @@ const pages: { path: string; priority: number; images: string[] }[] = [
     ),
   },
   { path: "/drywall", priority: 0.8, images: [] },
+  { path: "/contact", priority: 0.7, images: [] },
 ];
 
 const sitemap = (): MetadataRoute.Sitemap => {
