@@ -10,9 +10,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Reveal = () => {
   const pathname = usePathname();
-
-  // Gate the CSS so the hidden/overlay state only applies once JS can reveal it
-  // (prevents content staying invisible if the component never mounts).
   useEffect(() => {
     document.documentElement.classList.add("js-reveal");
   }, []);
