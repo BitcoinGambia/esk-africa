@@ -107,8 +107,8 @@ export const metadata: Metadata = {
     siteName: "ESK Group Africa",
     title: "ESK | Beautiful Custom Interiors",
     description,
-    url: "https://eskafrica.com",
     locale: "en_US",
+    url: "https://eskafrica.com",
   },
   twitter: {
     card: "summary_large_image",
