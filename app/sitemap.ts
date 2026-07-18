@@ -1,5 +1,7 @@
 import type { MetadataRoute } from "next";
 
+export const dynamic = "force-static";
+
 const base = "https://eskafrica.com";
 const img = (p: string) => `${base}${p}`;
 
