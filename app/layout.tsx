@@ -22,6 +22,9 @@ const description =
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://eskafrica.com"),
+  verification: {
+    google: "CCp5oP9PeRmThbmfcV3PYkWEw5dZfXaC-YP0GCLQW34",
+  },
   title: {
     default: "ESK | Beautiful Custom Interiors",
     template: "%s | ESK",
