@@ -22,7 +22,7 @@ jobs:
 
       - name: Build static export
         run: |
-          npm ci
+          npm install --no-audit --no-fund
           npm run build
 
       - name: Configure SSH
